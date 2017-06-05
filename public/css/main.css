@@ -178,38 +178,63 @@ nav#nav a.brand-logo > img {
 }
 
 nav#nav ul.right li {
-    float: right;
-    width: 24px;
+    float: left;
+    width: auto;
+    margin-top: 17px;
+    margin-right: 10px;
 }
 
 nav#nav ul.right li a {
-    padding: 4px 0;
-    height: 56px;
-    text-align: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background: no-repeat center center #5F6D83;
 }
 
 nav#nav ul.right li a:hover {
     background-color: transparent;
 }
 
-nav#nav ul.right li.donate-mobile img {
-    width: 17px;
+nav#nav ul.right li .nav-btn.kakao {
+    background-image: url('/img/kakaostory.png');
+    background-size: 9px 17px;
 }
 
-nav#nav ul.right li.kakao a {
-    padding-top: 5px;
+nav#nav ul.right li .nav-btn.facebook {
+    background-image: url('/img/facebook.png');
+    background-size: 9px 19px;
 }
 
-nav#nav ul.right li.kakao img {
-    width: 10px;
+nav#nav ul.right li .nav-btn.twitter {
+    background-image: url('/img/twitter.png');
+    background-size: 21px 16px;
 }
 
-nav#nav ul.right li.facebook img {
-    width: 9px;
+nav#nav ul.right li .nav-btn.donate {
+    background-size: 18px 16px;
+    background-color: #F29647;
+    background-image: url('/img/donate.png');
 }
 
-nav#nav ul.right li.twitter img {
-    width: 21px;
+nav#nav ul.right .donate-desktop, nav#nav ul.right .donation-counter {
+    display: none;
+}
+
+nav#nav ul.right .donate-desktop .nav-btn.donate {
+    width: auto;
+    background-position: 10px center;
+    padding-left: 28px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+nav#nav ul.right .donation-counter div {
+    height: initial;
+    font-size: 13px;
+    line-height: 15px;
+    color: #5c6d85;
 }
 
 nav#nav .button-collapse {
@@ -265,9 +290,7 @@ nav li.donate a.donate {
     height: 70px;
     padding: 0;
     margin: 0;
-    background-image: url(http://download.newstapa.org/common/choice2016/donate.png?v=2016060117);
-    background-repeat: no-repeat;
-    background-position: 50%;
+    background: url(http://download.newstapa.org/common/choice2016/donate.png?v=2016060117) no-repeat 50%;
     background-size: contain;
 }
 
@@ -570,7 +593,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     font-weight: 400;
     color: #5C6D85;
     font-size: 0.9rem;
-    letter-spacing: -0.05em:
+    letter-spacing: -0.05em;
 }
 
 #main .search-cards .card .card-content span.card-title, #main .search-cards .card .card-content .card-subtitle, .card .card-content span.card-title, .card .card-content .card-subtitle {
@@ -978,6 +1001,14 @@ footer.page-footer p {
         margin-right: 0;
     }
 
+    .donate-desktop, .donation-counter {
+        display: block !important;
+    }
+
+    .donate-mobile {
+        display: none !important;
+    }
+
     .hide-mobile {
         display: block !important;
     }
@@ -1202,43 +1233,6 @@ footer.page-footer p {
 
     nav#nav a.brand-logo img {
         width: 196px;
-    }
-
-    nav#nav ul.right {
-        width: 400px;
-    }
-
-    nav#nav ul.right li:not(.donate) {
-        width: 45px;
-    }
-
-    nav#nav ul.right li.donate {
-        width: 200px;
-    }
-
-    nav#nav ul.right li a {
-        padding: 15px 0;
-        height: 90px;
-    }
-
-    nav#nav ul.right li.kakao a {
-        padding-top: 15px;
-    }
-
-    nav#nav ul.right li a img {
-        width: auto;
-    }
-
-    nav#nav ul.right li.kakao img {
-        width: 15px;
-    }
-
-    nav#nav ul.right li.facebook img {
-        width: 13px;
-    }
-
-    nav#nav ul.right li.twitter img {
-        width: 30px;
     }
 
     nav#nav ul a {

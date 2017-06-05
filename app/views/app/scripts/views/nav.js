@@ -27,6 +27,17 @@ Officials.Views.Nav = Backbone.View.extend({
     }
 
     $('.drag-target').css('touch-action', 'no')
+
+    $.ajax({
+        url: 'http://newstapa.org/count',
+        dataType: 'json',
+        success: function(response) {
+            if (response.count) {
+                var number = response.count.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+                $('.donation-counter .number').text(number);
+            }
+        }
+    })
   },
 
   hideSlideOut: function() {
